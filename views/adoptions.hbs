@@ -1,0 +1,54 @@
+<h2>hi, I'm the adoptions page!</h2>
+
+<h2>Add your adoption here:</h2>
+
+<form action="/adoptions" method="POST">
+
+<label for="Name">Name:</label>
+<input type="text" name="Name" id="Name">
+
+<br>
+
+<label for="breed">Breed:</label>
+<input type="text" name="breed" id="breed">
+
+<br>
+
+
+<label for="birthDate">Birth Date: </label>
+<input type="date" name="birthDate" id="birthDate">
+
+<br>
+
+<label for="Gender">Gender:</label>
+<input type="text" name="Gender" id="Gender">
+
+<br>
+
+{{!-- <label for="image">Image:</label>
+   <form action="/upload" method="post" enctype="multipart/form-data">
+    <input type="text" name="name">
+    <input type="file" name="photo">
+    <input type="submit" value="Save">
+  </form>
+
+  <br> --}}
+
+<button type="submit">Add Adoption</button>
+
+</form>
+
+<br>
+
+<div>
+{{#each adopts}}
+  <div class="card">
+    <a href="/adoptions/{{id}}">
+      <h4><b>Name: {{Name}}</b></h4>
+      <p>Breed: {{breed}}</p>
+      <p>Bith Date: {{birthDate}}</p>
+      <p>Gender: {{Gender}}</p>
+    </a>
+  </div>
+ {{/each}}
+</div>

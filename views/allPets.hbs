@@ -1,0 +1,17 @@
+<h2>Hola!</h2>
+
+<div>
+  {{#each pets}}
+
+  <div class="card">
+    <a href="/singlePet/{{id}}">
+    <h4><b>Name: {{name}}</b></h4>
+    <p>Chip ID: {{chipId}}</p>
+    <p>Age: {{age}}</p>
+    <p>Gender: {{gender}}</p>
+    <p>Hair Color: {{hairColor}}</p>
+    </a>
+  </div>
+
+{{/each}}
+</div>

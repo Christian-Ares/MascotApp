@@ -1,0 +1,28 @@
+<h2>Edit your pet here:</h2>
+
+<form action="/editPet/{{id}}" method="POST">
+
+<label for="name">Name:</label>
+<input type="text" name="name" id="name" value="{{name}}">
+
+<br>
+
+
+<label for="age">Age:</label>
+<input type="number" name="age" id="age" value="{{age}}">
+
+<br>
+
+
+{{!-- <label for="image">Image:</label>
+   <form action="/upload" method="post" enctype="multipart/form-data">
+    <input type="text" name="name">
+    <input type="file" name="photo">
+    <input type="submit" value="Save">
+  </form>
+
+  <br> --}}
+
+<button type="submit">Edit Pet</button>
+
+</form>

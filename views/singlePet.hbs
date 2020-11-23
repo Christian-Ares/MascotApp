@@ -1,0 +1,20 @@
+
+
+<p>Name: {{name}}</p>
+<p>Chip ID: {{chipId}}</p>
+<p>Age: {{age}}</p>
+<p>Gender: {{gender}}</p>
+<p>Hair Color: {{hairColor}}</p>
+{{!-- <p>Image</p> --}}
+
+
+
+<button>
+    <a href="/editPet/{{id}}">Editar</a>
+</button>
+
+
+<form action="/deletePet/{{id}}" method="POST">
+    <button type="submit">Eliminar</button>
+</form>
+

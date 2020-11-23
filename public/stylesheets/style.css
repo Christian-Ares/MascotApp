@@ -1,0 +1,62 @@
+body{
+  margin: 0;
+  padding: 0;
+  background-image: url("https://www.hola.com/imagenes/estar-bien/20191205155716/razas-de-perros-adiestrar/0-756-6/razas-de-perro-adiestrar-a.jpg?filter=ds75");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+nav{
+  width: 100vw;
+}
+
+ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li{
+  float: left;
+}
+
+li a{
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 1.3rem;
+}
+
+li a:hover{
+  background-color: #111;
+}
+
+div img{
+    width: 100vw;
+    opacity: 0.3;
+}
+
+.logs{
+    float: right;
+}
+
+.logs a:hover{
+  background-color: lime;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  border-radius: 5px;
+  width: fit-content;
+  background-color: white;
+  text-decoration: none;
+}
+
+/* img { descomentar cuando añada las imagenes
+  border-radius: 5px 5px 0 0;
+} */
