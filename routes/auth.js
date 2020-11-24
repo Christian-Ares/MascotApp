@@ -165,13 +165,12 @@ router.get('/events', (req, res)=>{
 })
 
 //ADOPTIONS
-router.get('/adoptions', (req, res)=>{
-  res.render('adoptions')
-})
+
 
 router.get('/adoptions', (req, res)=>{
   Adopt.find({})
   .then((adopts)=>{
+    console.log(adopts)
     res.render('adoptions', {adopts})
   })
   .catch((err)=>{
