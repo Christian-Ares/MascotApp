@@ -7,7 +7,8 @@ const petSchema = new Schema({
     age: {type: Number},
     gender: {type: String, required: true},
     hairColor: {type: String, required: true},
-    //Image: {type: Image}
+    Image_name: {type: String}, 
+    Image_path: {type: String}
 })
 
 const Pet = mongoose.model('Pet', petSchema)

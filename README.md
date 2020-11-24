@@ -1,5 +1,5 @@
 # MascotApp
 
-## Second Project from the Ironhack bootcamp.
+## Second Project from the Ironhack bootcamp
 
-### MascotApp webapp created by Christian Ares.
+### MascotApp webapp created by Christian Ares

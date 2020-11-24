@@ -6,7 +6,8 @@ const adoptSchema = new Schema({
     breed: {type: String},
     birthDate: {type: String},
     Gender: {type: String},
-    //Image: {type: Image}
+    image_name: {type: String},
+    image_path: {type: String}
 })
 
 const Adopt = mongoose.model('Adopt', adoptSchema)

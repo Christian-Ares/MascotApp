@@ -3,13 +3,13 @@ const router      = express.Router();
 const bcrypt      = require('bcrypt')
 const passport    = require('passport')
 const ensureLogin = require('connect-ensure-login')
-
+const uploadCloud = require('../config/cloudinary')
 
 const User   = require('../models/User')
 const Pet    = require('../models/Pet')
 const Adopt  = require('../models/Adopt')
 
-
+//LOG IN, SIGN UP, LOG OUT, AUTH
 router.get('/signup', (req, res, next) => {
   res.render('auth/signup');
 });
@@ -73,14 +73,15 @@ router.get('/newPet', checkForAuthentification, (req, res, next)=>{
   res.render('newPet')
 });
 
-router.post('/newPet', checkForAuthentification, (req, res, next)=>{
+router.post('/newPet',  uploadCloud.single('Image_path'), checkForAuthentification, (req, res, next)=>{
 
-  console.log(req.body)
+  const {name, chipId, age, gender, hairColor} = req.body
+  const Image_name = req.file.originalname
+  const Image_path = req.file.path
 
-  const newPet = req.body
-
-  Pet.create(newPet)
-  .then(()=>{
+  Pet.create({name, chipId, age, gender, hairColor, Image_name, Image_path})
+  .then((result)=>{
+    console.log(result)
       res.redirect("/newPet")
   })
   .catch((err)=>{
@@ -159,7 +160,8 @@ router.post('/deletePet/:id', (req, res, next)=>{
       res.send(err);
   });
 });
-
+ 
+//EVENTS
 router.get('/events', (req, res)=>{
   res.render('events')
 })
@@ -188,6 +190,37 @@ router.post('/adoptions', (req, res)=>{
       res.send(err)
   })
 })
+
+router.get('/adoptions/:id', (req, res, next)=>{
+
+  const adoptID = req.params.id;
+
+  Adopt.findById(adoptID)
+  .then((result)=>{
+      res.render('singleAdopt', result);
+  })
+  .catch((err)=>{
+      console.log(err);
+      res.send(err);
+  }); 
+});
+
+router.post('/deleteAdopt/:id', (req, res, next)=>{
+
+  const id = req.params.id;
+
+  Adopt.findByIdAndDelete(id)
+  .then(()=>{
+      res.redirect('/adoptions');
+  })
+  .catch((err)=>{
+      console.log(err);
+      res.send(err);
+  });
+});
+
+
+//IMAGES
 
 
 module.exports = router;
