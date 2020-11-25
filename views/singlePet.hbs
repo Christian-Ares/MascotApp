@@ -1,19 +1,19 @@
 
-<img src="{{Image_path}}" alt="">
-<p>Name: {{name}}</p>
-<p>Chip ID: {{chipId}}</p>
-<p>Age: {{age}}</p>
-<p>Gender: {{gender}}</p>
-<p>Hair Color: {{hairColor}}</p>
+<img src="{{result.Image_path}}">
+<p>Name: {{result.name}}</p>
+<p>Chip ID: {{result.chipId}}</p>
+<p>Age: {{result.age}}</p>
+<p>Gender: {{result.gender}}</p>
+<p>Hair Color: {{result.hairColor}}</p>
 
 
 
 <button>
-    <a href="/editPet/{{id}}">Editar</a>
+    <a href="/editPet/{{result.id}}">Editar</a>
 </button>
 
 
-<form action="/deletePet/{{id}}" method="POST">
+<form action="/deletePet/{{result.id}}" method="POST">
     <button type="submit">Eliminar</button>
 </form>
 

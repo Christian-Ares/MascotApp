@@ -4,6 +4,7 @@ body{
   background-image: url("https://www.hola.com/imagenes/estar-bien/20191205155716/razas-de-perros-adiestrar/0-756-6/razas-de-perro-adiestrar-a.jpg?filter=ds75");
   background-repeat: no-repeat;
   background-size: cover;
+  
 }
 
 nav{
@@ -35,11 +36,6 @@ li a:hover{
   background-color: #111;
 }
 
-div img{
-    width: 100vw;
-    opacity: 0.3;
-}
-
 .logs{
     float: right;
 }
@@ -57,6 +53,7 @@ div img{
   text-decoration: none;
 }
 
-/* img { descomentar cuando añada las imagenes
+img { 
   border-radius: 5px 5px 0 0;
-} */
+  width: 10vw;
+}

@@ -15,9 +15,12 @@
             <li><a href="/events">Events</a></li>
             <li><a href="/adoptions">Adopts</a></li>
                 <ul class="logs">
+                    {{#if user}}
+                    <li><a href="/logout">Log Out</a></li>
+                    {{else}}
                     <li><a href="/signup">Sign Up</a></li>
                     <li><a href="/login">Log In</a></li>
-                    <li><a href="/logout">Log Out</a></li>
+                    {{/if}}
                 </ul>
         </ul>
     </nav>

@@ -1,15 +1,15 @@
 <h2>Edit your pet here:</h2>
 
-<form action="/editPet/{{id}}" method="POST">
+<form action="/editPet/{{result.id}}" method="POST">
 
 <label for="name">Name:</label>
-<input type="text" name="name" id="name" value="{{name}}">
+<input type="text" name="name" id="name" value="{{result.name}}">
 
 <br>
 
 
 <label for="age">Age:</label>
-<input type="number" name="age" id="age" value="{{age}}">
+<input type="number" name="age" id="age" value="{{result.age}}">
 
 <br>
 

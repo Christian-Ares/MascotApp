@@ -2,7 +2,7 @@
 
 <h2>Add your adoption here:</h2>
 
-<form action="/adoptions" method="POST">
+<form action="/adoptions" method="POST" enctype="multipart/form-data">
 
 <label for="Name">Name:</label>
 <input type="text" name="Name" id="Name">
@@ -26,7 +26,7 @@
 <br>
 
 <label for="image_path">Attached file: </label>
-<input type="file" name="image" id="image">
+<input type="file" name="image_path" id="image_path">
 
 <button type="submit">Add Adoption</button>
 
@@ -40,7 +40,7 @@
       <p>Breed: {{breed}}</p>
       <p>Bith Date: {{birthDate}}</p>
       <p>Gender: {{Gender}}</p>
-      <p>Image: {{image}}</p>
+      <img src="{{image_path}}" alt="{{image_name}}">
     </a>
   </div>
  {{/each}}

@@ -70,19 +70,20 @@ router.get('/', ensureLogin.ensureLoggedIn(), (req, res)=>{
 
 //ADD PET
 router.get('/newPet', checkForAuthentification, (req, res, next)=>{
-  res.render('newPet')
+  const user = req.user
+  res.render('newPet', {user})
 });
 
-router.post('/newPet',  uploadCloud.single('Image_path'), checkForAuthentification, (req, res, next)=>{
+router.post('/newPet',  uploadCloud.single('Image_path, Image_name'), checkForAuthentification, (req, res, next)=>{
 
   const {name, chipId, age, gender, hairColor} = req.body
-  const Image_name = req.file.originalname
-  const Image_path = req.file.path
+  const Image_name = req.file ? req.file.originalname : 'avatar.jpg'
+  const Image_path = req.file ? req.file.path : '/images/avatar.jpg'
 
   Pet.create({name, chipId, age, gender, hairColor, Image_name, Image_path})
   .then((result)=>{
     console.log(result)
-      res.redirect("/newPet")
+      res.redirect('/newPet')
   })
   .catch((err)=>{
       res.send(err)
@@ -90,12 +91,13 @@ router.post('/newPet',  uploadCloud.single('Image_path'), checkForAuthentificati
 })
 
 router.get('/singlePet/:id', (req, res, next)=>{
-
+  const user = req.user
   const petID = req.params.id;
 
   Pet.findById(petID)
   .then((result)=>{
-      res.render('singlePet', result);
+   
+      res.render('singlePet', {result, user, petID});
   })
   .catch((err)=>{
       console.log(err);
@@ -105,9 +107,11 @@ router.get('/singlePet/:id', (req, res, next)=>{
 
 //ALL PETS
 router.get('/allPets', checkForAuthentification, (req, res)=>{
+  const user = req.user
   Pet.find({})
   .then((pets)=>{
-    res.render('allPets', {pets})
+
+    res.render('allPets', {pets, user})
   })
   .catch((err)=>{
     res.sendr(err)
@@ -117,12 +121,12 @@ router.get('/allPets', checkForAuthentification, (req, res)=>{
 //EDIT PETS
 
 router.get('/editPet/:id', checkForAuthentification, (req, res, next)=>{
-
+  const user = req.user
   const id = req.params.id;
 
   Pet.findById(id)
   .then((result)=>{
-      res.render('editPet', result);
+      res.render('editPet', {result, user});
   })
   .catch((err)=>{
       console.log(err);
@@ -169,20 +173,23 @@ router.get('/events', (req, res)=>{
 //ADOPTIONS
 
 router.get('/adoptions', (req, res)=>{
+  const user = req.user
   Adopt.find({})
   .then((adopts)=>{
-    res.render('adoptions', {adopts})
+    res.render('adoptions', {adopts, user})
   })
   .catch((err)=>{
     res.send(err)
   })
 })
 
-router.post('/adoptions', (req, res)=>{
+router.post('/adoptions', uploadCloud.single('image_path, image_name'), (req, res)=>{
 
-  const newAdopt = req.body
+  const {Name, breed, birthDate, Gender} = req.body
+  const image_name = req.file ? req.file.originalname : 'avatar.jpg'
+  const image_path = req.file ? req.file.path : '/images/avatar.jpg'
 
-  Adopt.create(newAdopt)
+  Adopt.create({Name, breed, birthDate, Gender, image_name, image_path})
   .then(()=>{
       res.redirect("/adoptions")
   })
@@ -193,11 +200,12 @@ router.post('/adoptions', (req, res)=>{
 
 router.get('/adoptions/:id', (req, res, next)=>{
 
+  const user = req.user
   const adoptID = req.params.id;
 
   Adopt.findById(adoptID)
   .then((result)=>{
-      res.render('singleAdopt', result);
+      res.render('singleAdopt', {user, result});
   })
   .catch((err)=>{
       console.log(err);
