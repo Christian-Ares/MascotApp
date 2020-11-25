@@ -74,7 +74,7 @@ router.get('/newPet', checkForAuthentification, (req, res, next)=>{
   res.render('newPet', {user})
 });
 
-router.post('/newPet',  uploadCloud.single('Image_path, Image_name'), checkForAuthentification, (req, res, next)=>{
+router.post('/newPet',  uploadCloud.single('Image_path'), (req, res, next)=>{
 
   const {name, chipId, age, gender, hairColor} = req.body
   const Image_name = req.file ? req.file.originalname : 'avatar.jpg'
@@ -134,13 +134,16 @@ router.get('/editPet/:id', checkForAuthentification, (req, res, next)=>{
   });
 });
 
-router.post('/editPet/:id', checkForAuthentification, (req, res)=>{
+router.post('/editPet/:id', uploadCloud.single('Image_path'), (req, res)=>{
  
   const id = req.params.id
 
-  const editedPet = req.body
+  let {name, chipId, age, gender, hairColor, att_name, att_path} = req.body
+  const Image_name = req.file ? req.file.originalname : att_name
+  const Image_path = req.file ? req.file.path : att_path
 
- Pet.findByIdAndUpdate(id, editedPet)
+  
+ Pet.findByIdAndUpdate(id, {name, chipId, age, gender, hairColor, Image_name: Image_name, Image_path: Image_path})
  .then(()=>{
    res.redirect(`/singlePet/${id}`)
  })

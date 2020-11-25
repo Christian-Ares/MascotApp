@@ -1,6 +1,6 @@
 <h2>Edit your pet here:</h2>
 
-<form action="/editPet/{{result.id}}" method="POST">
+<form action="/editPet/{{result.id}}" method="POST" enctype="multipart/form-data">
 
 <label for="name">Name:</label>
 <input type="text" name="name" id="name" value="{{result.name}}">
@@ -13,9 +13,11 @@
 
 <br>
 
-<label for="Image">Attached file: </label>
-<input type="file" name="Image" id="Image">
+<label for="Image_path">Attached file: </label>
+<input type="file" name="Image_path" id="Image_path">
+<input type="hidden" name="att_name" id="att_name" value="{{result.Image_name}}">
+<input type="hidden" name="att_path" id="att_path" value="{{result.Image_path}}">
 
-<input type="submit" value="SAVE">
+<button type="submit">Edit Pet</button>
 
 </form>
