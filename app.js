@@ -17,7 +17,7 @@ const flash         = require('connect-flash');
 const User = require('./models/User.js');
 
 mongoose
-  .connect('mongodb://localhost/mascotApp', {useNewUrlParser: true, useUnifiedTopology: true, useUnifiedTopology: true,
+  .connect(`mongodb+srv://${process.env.DBUSER}:${process.env.DBPASSWORD}@cluster0.ovn0f.mongodb.net/${process.env.DBNAME}?retryWrites=true&w=majority`, {useNewUrlParser: true, useUnifiedTopology: true, useUnifiedTopology: true,
   useFindAndModify: false})
   .then(x => {
     console.log(`Connected to Mongo! Database name: "${x.connections[0].name}"`)
