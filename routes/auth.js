@@ -240,8 +240,7 @@ router.post('/editAdopt/:id', uploadCloud.single('image_path'), (req, res)=>{
 
   
  Adopt.findByIdAndUpdate( id, {Name, breed, birthDate, Gender, image_name: image_name, image_path: image_path})
- .then((result)=>{
-   console.log(result)
+ .then(()=>{
    res.redirect(`/adoptions/${id}`)
  })
  .catch((err)=>{
