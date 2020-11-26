@@ -1,20 +1,21 @@
+<section>
+    <div>
+        <div>
+            <img src="{{result.image_path}}" alt="{{result.image_name}}">
+            <h4><b>Name: {{result.Name}}</b></h4>
+            <p>Breed: {{result.breed}}</p>
+            <p>Bith Date: {{result.birthDate}}</p>
+            <p>Gender: {{result.Gender}}</p>
+        </div>            
+        <div>
+            <button>
+                <a href="/editAdopt/{{result.id}}">Editar</a>
+            </button>
+            <br>
+            <form action="/deleteAdopt/{{result.id}}" method="POST">
+                <button type="submit">Eliminar</button>
+            </form>
+        </div>
+    </div>
 
-
-    <img src="{{result.image_path}}" alt="{{result.image_name}}">
-    <h4><b>Name: {{result.Name}}</b></h4>
-    <p>Breed: {{result.breed}}</p>
-    <p>Bith Date: {{result.birthDate}}</p>
-    <p>Gender: {{result.Gender}}</p>
-      
-
-<br>
-
-
-<button>
-    <a href="/editAdopt/{{result.id}}">Editar</a>
-</button>
-
-
-<form action="/deleteAdopt/{{result.id}}" method="POST">
-    <button type="submit">Eliminar</button>
-</form>
+</section>

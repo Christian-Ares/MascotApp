@@ -1,4 +1,8 @@
-<form action="/login" method="POST">
+<section class="logSect">
+
+<form action="/login" method="POST" id="logForm">
+<div id="containerLog"
+
 
 <label for="username">Username: </label>
 <input type="text" id="username" name="username">
@@ -6,10 +10,14 @@
 <label for="password">Password: </label>
 <input type="password" id="password" name="password">
 
-<button type="submit">LOG IN</button>
+</div>
+
+<button type="submit" class="logBut">LOG IN</button>
 
 {{#if errorMessage}}
 <p>{{errorMessage}}</p>
 {{/if}}
-
+</div>
 </form>
+
+</section>

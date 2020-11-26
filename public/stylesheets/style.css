@@ -1,14 +1,16 @@
 body{
   margin: 0;
   padding: 0;
-  background-image: url("https://www.hola.com/imagenes/estar-bien/20191205155716/razas-de-perros-adiestrar/0-756-6/razas-de-perro-adiestrar-a.jpg?filter=ds75");
+  /* background-image: url("https://www.hola.com/imagenes/estar-bien/20191205155716/razas-de-perros-adiestrar/0-756-6/razas-de-perro-adiestrar-a.jpg?filter=ds75"); */
   background-repeat: no-repeat;
   background-size: cover;
-  
+  font-family: 'Sansita Swashed', cursive;
 }
 
 nav{
   width: 100vw;
+  background: rgb(2,0,36);
+  background: linear-gradient(270deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
 }
 
 ul{
@@ -16,7 +18,7 @@ ul{
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #333;
+  
 }
 
 li{
@@ -41,7 +43,7 @@ li a:hover{
 }
 
 .logs a:hover{
-  background-color: lime;
+  background-color: rgb(2, 253, 199);
 }
 
 .card {
@@ -57,7 +59,64 @@ li a:hover{
 
 img { 
   border-radius: 5px 5px 0 0;
-  width: 10vw;
+  width: 190px;
 }
 
+a {
+  text-decoration: none;
+  color: black;
+}
 
+#containerLog{
+display: flex;
+flex-direction: column;
+width: 290px;
+margin-top: 2rem;
+font-size: 1.5rem;
+}
+
+.logBut{
+  margin-top:1.5rem;
+}
+
+#logForm{
+  width: 25rem;
+  margin-left: 5rem;
+}
+
+.logSect{
+  height: 50rem;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#allTitle{
+  width: fit-content;
+  background-color: #111;
+  color:white ;
+}
+
+#allSect{
+  display: flex;
+  justify-content: center;
+}
+
+label{
+  font-size: 1.3rem
+}
+
+#adoptSect{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+input{
+
+}
+
+h1{
+  font-size: 3rem;
+}

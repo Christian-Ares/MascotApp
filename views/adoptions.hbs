@@ -1,11 +1,14 @@
-<h2>Hi, I'm the adoptions page!</h2>
+<section id="adoptSect">
+<h1>Hi, I'm the adoptions page!</h1>
 
 <h2>Add your adoption here:</h2>
+
+<div>
 
 <form action="/adoptions" method="POST" enctype="multipart/form-data">
 
 <label for="Name">Name:</label>
-<input type="text" name="Name" id="Name">
+<input type="text" name="Name" id="Name" >
 
 <br>
 
@@ -25,28 +28,36 @@
 
 <br>
 
-<label for="image_path"></label>
+<label for="image_path">Image: </label>
 <input type="file" name="image_path" id="image_path">
+
+</div>
+
+<br>
 
 <button type="submit">Add Adoption</button>
 
 </form>
 
+</section>
+
 <br>
 
-<div class="row">
-<div class="column">
-{{#each adopts}}
-  <div class="card">
-    <a href="/adoptions/{{id}}">
-      <img src="{{image_path}}" alt="{{image_name}}">
-      <h4><b>Name:{{Name}}</b></h4>
-      <p>Breed:{{breed}}</p>
-      <p>Bith Date:{{birthDate}}</p>
-      <p>Gender:{{Gender}}</p>
-      
-    </a>
+
+
+<div>
+  {{#each adopts}}
+  <div>
+    <div class="card">
+      <a href="/adoptions/{{id}}">
+        <img src="{{image_path}}" alt="{{image_name}}">
+        <h4><b>Name:{{Name}}</b></h4>
+        <p>Breed:{{breed}}</p>
+        <p>Bith Date:{{birthDate}}</p>
+        <p>Gender:{{Gender}}</p>
+        
+      </a>
+    </div>
   </div>
- {{/each}}
-</div>
+  {{/each}}
 </div>
