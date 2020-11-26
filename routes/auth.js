@@ -216,6 +216,28 @@ router.get('/adoptions/:id', (req, res, next)=>{
   }); 
 });
 
+router.get('/editAdopt/:id', (req, res)=>{
+  res.render('editAdopt')
+})
+
+router.post('/editAdopt/:id', uploadCloud.single('image_path'), (req, res)=>{
+ 
+  const id = req.params.id
+
+  let {Name, breed, birthDate, Gender, att_name, att_path} = req.body
+  const image_name = req.file ? req.file.originalname : att_name
+  const image_path = req.file ? req.file.path : att_path
+
+  
+ Pet.findByIdAndUpdate(id, {Name, breed, birthDate, Gender, image_name: image_name, image_path: image_path})
+ .then(()=>{
+   res.redirect(`/singleAdopt/${id}`)
+ })
+ .catch((err)=>{
+   res.send(err)
+ })
+})
+
 router.post('/deleteAdopt/:id', (req, res, next)=>{
 
   const id = req.params.id;
