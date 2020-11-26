@@ -262,8 +262,4 @@ router.post('/deleteAdopt/:id', (req, res, next)=>{
   });
 });
 
-
-//IMAGES
-
-
 module.exports = router;
