@@ -1,5 +1,5 @@
 {
-  "name": "project2",
+  "name": "MascotApp",
   "version": "0.0.0",
   "private": true,
   "scripts": {
@@ -29,5 +29,8 @@
   },
   "devDependencies": {
     "nodemon": "^1.12.1"
+  },
+  "engines": {
+    "node": ">=14.15.0"
   }
 }
