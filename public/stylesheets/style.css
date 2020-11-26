@@ -51,9 +51,13 @@ li a:hover{
   width: fit-content;
   background-color: white;
   text-decoration: none;
+  margin-left: 2rem;
+  margin-right: 0;
 }
 
 img { 
   border-radius: 5px 5px 0 0;
   width: 10vw;
 }
+
+

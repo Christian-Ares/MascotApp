@@ -168,10 +168,6 @@ router.post('/deletePet/:id', (req, res, next)=>{
   });
 });
  
-//EVENTS
-router.get('/events', (req, res)=>{
-  res.render('events')
-})
 
 //ADOPTIONS
 
