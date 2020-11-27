@@ -1,10 +1,11 @@
 body{
   margin: 0;
   padding: 0;
-  /* background-image: url("https://www.hola.com/imagenes/estar-bien/20191205155716/razas-de-perros-adiestrar/0-756-6/razas-de-perro-adiestrar-a.jpg?filter=ds75"); */
-  background-repeat: no-repeat;
+  background-image: url("https://www.hola.com/imagenes/estar-bien/20191205155716/razas-de-perros-adiestrar/0-756-6/razas-de-perro-adiestrar-a.jpg?filter=ds75");
+  background-repeat:repeat;
   background-size: cover;
   font-family: 'Sansita Swashed', cursive;
+  color: rgb(0, 0, 0);
 }
 
 nav{
@@ -53,6 +54,7 @@ li a:hover{
   width: fit-content;
   background-color: white;
   text-decoration: none;
+  padding: 1rem;
   margin: 0 2rem;
 }
 
@@ -138,6 +140,43 @@ h1{
   display: flex;
 }
 
-/* .column{
-  flex: 100%;
-} */
+#home{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 13rem ;
+}
+
+#home h2{
+  width: 50vw;
+  font-size: 1.5rem;
+}
+
+#home h3{
+  font-size: 2rem;
+}
+
+#home button{
+  width: 15rem;
+  height: 2rem;
+  margin: 1rem;
+  border-radius: 5px;
+  font-size: 1.3rem;
+  font-family: 'Sansita Swashed', cursive;
+}
+
+#home button:hover{
+color: white;
+background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+border-radius: 10px;
+}
+
+.but{
+  height: 2rem;
+  margin: 1rem;
+  border-radius: 5px;
+  font-size: 1.3rem;
+  font-family: 'Sansita Swashed', cursive;
+}
