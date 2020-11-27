@@ -53,13 +53,12 @@ li a:hover{
   width: fit-content;
   background-color: white;
   text-decoration: none;
-  margin-left: 2rem;
-  margin-right: 0;
+  margin: 0 2rem;
 }
 
 img { 
   border-radius: 5px 5px 0 0;
-  width: 190px;
+  width: 15rem;
 }
 
 a {
