@@ -1,5 +1,5 @@
 <h2>Add your pet here:</h2>
-
+<div id="formDiv">
 <form action="/newPet" method="POST" enctype="multipart/form-data">
 
 <label for="name">Name:</label>
@@ -8,12 +8,12 @@
 <br>
 
 <label for="chipId">Chip ID:</label>
-<input type="number" name="chipId" id="chipId" required>
+<input type="text" name="chipId" id="chipId" required>
 
 <br>
 
 <label for="age">Age:</label>
-<input type="number" name="age" id="age">
+<input type="text" name="age" id="age">
 
 <br>
 
@@ -27,9 +27,12 @@
 
 <br>
 
-<label for="Image_path">Attached file: </label>
+<label for="Image_path">Image: </label>
 <input type="file" name="Image_path" id="Image_path">
+
+<br>
 
 <button type="submit">Add Pet</button>
 
 </form>
+</div>
