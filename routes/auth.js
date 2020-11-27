@@ -75,14 +75,13 @@ router.get('/newPet', checkForAuthentification, (req, res, next)=>{
 });
 
 router.post('/newPet',  uploadCloud.single('Image_path'), (req, res, next)=>{
-
+  const userID = req.user._id
   const {name, chipId, age, gender, hairColor} = req.body
   const Image_name = req.file ? req.file.originalname : 'avatar.jpg'
   const Image_path = req.file ? req.file.path : '/images/avatar.jpg'
 
-  Pet.create({name, chipId, age, gender, hairColor, Image_name, Image_path})
-  .then((result)=>{
-    console.log(result)
+  Pet.create({name, chipId, age, gender, hairColor, Image_name, Image_path, userID})
+  .then(()=>{
       res.redirect('/newPet')
   })
   .catch((err)=>{
@@ -107,8 +106,9 @@ router.get('/singlePet/:id', (req, res, next)=>{
 
 //ALL PETS
 router.get('/allPets', checkForAuthentification, (req, res)=>{
+  const userID = req.user._id
   const user = req.user
-  Pet.find({})
+  Pet.find({userID})
   .then((pets)=>{
 
     res.render('allPets', {pets, user})
