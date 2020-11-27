@@ -180,3 +180,15 @@ border-radius: 10px;
   font-size: 1.3rem;
   font-family: 'Sansita Swashed', cursive;
 }
+
+.buttons{
+margin-left: 1rem;
+}
+
+.adoptSingl{
+  margin: 2rem 2rem 2rem 0;
+}
+
+.petSingl{
+  margin: 2rem 2rem 2rem 0;
+}

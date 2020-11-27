@@ -1,20 +1,20 @@
+<div class="petSingl">
+    <div class="card">
+        <img src="{{result.Image_path}}">
+        <p>Name: {{result.name}}</p>
+        <p>Chip ID: {{result.chipId}}</p>
+        <p>Age: {{result.age}}</p>
+        <p>Gender: {{result.gender}}</p>
+        <p>Hair Color: {{result.hairColor}}</p>
+    </div>
+</div>
+<div class="buttons">
+    <button class="but">
+        <a href="/editPet/{{result.id}}">Editar</a>
+    </button>
 
 
-<img src="{{result.Image_path}}">
-<p>Name: {{result.name}}</p>
-<p>Chip ID: {{result.chipId}}</p>
-<p>Age: {{result.age}}</p>
-<p>Gender: {{result.gender}}</p>
-<p>Hair Color: {{result.hairColor}}</p>
-
-
-
-<button class="but">
-    <a href="/editPet/{{result.id}}">Editar</a>
-</button>
-
-
-<form action="/deletePet/{{result.id}}" method="POST">
-    <button type="submit" class="but">Eliminar</button>
-</form>
-
+    <form action="/deletePet/{{result.id}}" method="POST">
+        <button type="submit" class="but">Eliminar</button>
+    </form>
+</div>
