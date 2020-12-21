@@ -168,7 +168,6 @@ router.post('/deletePet/:id', (req, res, next)=>{
   });
 });
  
-
 //ADOPTIONS
 
 router.get('/adoptions', (req, res)=>{
