@@ -1,23 +1,23 @@
+
 <section class="logSect">
+  <div class="container">
+      <form action="/login" method="POST" id="logForm">
+        <div id="containerLog"
 
-<form action="/login" method="POST" id="logForm">
-<div id="containerLog"
+          <label for="username">Username: </label>
+          <input type="text" id="username" name="username">
 
+          <label for="password">Password: </label>
+          <input type="password" id="password" name="password">
 
-<label for="username">Username: </label>
-<input type="text" id="username" name="username">
+          </div>
 
-<label for="password">Password: </label>
-<input type="password" id="password" name="password">
+          <button type="submit" class="but">LOG IN</button>
 
-</div>
-
-<button type="submit" class="but">LOG IN</button>
-
-{{#if errorMessage}}
-<p>{{errorMessage}}</p>
-{{/if}}
-</div>
-</form>
-
+          {{#if errorMessage}}
+          <p>{{errorMessage}}</p>
+          {{/if}}
+        </div>
+      </form>
+  </div>
 </section>

@@ -1,32 +1,32 @@
-body{
+body {
   margin: 0;
   padding: 0;
-  background-image: url("https://www.hola.com/imagenes/estar-bien/20191205155716/razas-de-perros-adiestrar/0-756-6/razas-de-perro-adiestrar-a.jpg?filter=ds75");
-  background-repeat:repeat;
+  background-image: url("../images/patron-huesos-costuras_1284-43081.jpg");
+  background-repeat: repeat;
   background-size: cover;
   font-family: 'Sansita Swashed', cursive;
   color: rgb(0, 0, 0);
 }
 
-nav{
+nav {
   width: 100vw;
-  background: rgb(2,0,36);
-  background: linear-gradient(270deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+  background: rgb(2, 0, 36);
+  background: linear-gradient(270deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
 }
 
-ul{
+ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
-  
+
 }
 
-li{
+li {
   float: left;
 }
 
-li a{
+li a {
   display: block;
   color: white;
   text-align: center;
@@ -35,20 +35,20 @@ li a{
   font-size: 1.3rem;
 }
 
-li a:hover{
+li a:hover {
   background-color: #111;
 }
 
-.logs{
-    float: right;
+.logs {
+  float: right;
 }
 
-.logs a:hover{
+.logs a:hover {
   background-color: rgb(2, 253, 199);
 }
 
 .card {
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
   border-radius: 5px;
   width: fit-content;
@@ -58,7 +58,7 @@ li a:hover{
   margin: 0 2rem;
 }
 
-img { 
+img {
   border-radius: 5px 5px 0 0;
   width: 15rem;
 }
@@ -68,96 +68,96 @@ a {
   color: black;
 }
 
-#containerLog{
-display: flex;
-flex-direction: column;
-width: 290px;
-margin-top: 2rem;
-font-size: 1.5rem;
+#containerLog {
+  display: flex;
+  flex-direction: column;
+  width: 290px;
+  margin-top: 2rem;
+  font-size: 1.5rem;
 }
 
-.logBut{
-  margin-top:1.5rem;
+.logBut {
+  margin-top: 1.5rem;
 }
 
-#logForm{
+#logForm {
   width: 25rem;
-  margin-left: 5rem;
+  padding: 2em;
 }
 
-.logSect{
+.logSect {
   height: 50rem;
-  display:flex;
+  display: flex;
   justify-content: center;
   align-items: center;
 }
 
-#divTitle{
+#divTitle {
   display: flex;
   justify-content: center;
 }
 
-#allTitle{
+#allTitle {
   width: fit-content;
   height: fit-content;
   background-color: #111;
-  color:white;
+  color: white;
 }
 
-#allSect{
+#allSect {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
 }
 
-label{
+label {
   font-size: 1.3rem
 }
 
-#adoptSect{
+#adoptSect {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-#formDiv{
+#formDiv {
   margin-left: 2rem;
 }
 
-input{
+input {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-h1{
+h1 {
   font-size: 3rem;
 }
 
-.row{
+.row {
   display: flex;
 }
 
-#home{
+#home {
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  padding-top: 13rem ;
+  padding-top: 13rem;
 }
 
-#home h2{
+#home h2 {
   width: 50vw;
   font-size: 1.5rem;
 }
 
-#home h3{
+#home h3 {
   font-size: 2rem;
 }
 
-#home button{
+#home button {
   width: 15rem;
   height: 2rem;
   margin: 1rem;
@@ -166,14 +166,14 @@ h1{
   font-family: 'Sansita Swashed', cursive;
 }
 
-#home button:hover{
-color: white;
-background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
-box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-border-radius: 10px;
+#home button:hover {
+  color: white;
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
 }
 
-.but{
+.but {
   height: 2rem;
   margin: 1rem;
   border-radius: 5px;
@@ -181,14 +181,36 @@ border-radius: 10px;
   font-family: 'Sansita Swashed', cursive;
 }
 
-.buttons{
-margin-left: 1rem;
+.buttons {
+  margin-left: 1rem;
 }
 
-.adoptSingl{
+.adoptSingl {
   margin: 2rem 2rem 2rem 0;
 }
 
-.petSingl{
+.petSingl {
   margin: 2rem 2rem 2rem 0;
+}
+
+.container{
+  display: flex;
+  background-color: rgb(134, 134, 134, .7);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+
+.divider{
+  background-color: antiquewhite;
+  height: 2px;
+}
+
+.adoptLogForm{
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.adoptLogForm .input{
+  align-items: center;
 }

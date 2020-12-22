@@ -1,14 +1,18 @@
-<form action="/signup" method="POST">
+<div class="logSect">
+  <div class="container">
+    <form action="/signup" method="POST" id="logForm">
 
-<label for="username">Username: </label>
-<input type="text" id="username" name="username">
+      <label for="username">Username: </label>
+      <input type="text" id="username" name="username">
 
-<label for="password">Password: </label>
-<input type="password" id="password" name="password">
+      <label for="password">Password: </label>
+      <input type="password" id="password" name="password">
 
-<button type="submit">CREATE USER</button>
+      <button type="submit" class="but">Create User</button>
 
-{{#if errorMessage}}
-<p>{{errorMessage}}</p>
-{{/if}}
-</form>
+        {{#if errorMessage}}
+        <p>{{errorMessage}}</p>
+        {{/if}}
+    </form>
+  </div>
+</div>

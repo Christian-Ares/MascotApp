@@ -6,7 +6,8 @@
             <p>Breed: {{result.breed}}</p>
             <p>Bith Date: {{result.birthDate}}</p>
             <p>Gender: {{result.Gender}}</p>
-        </div>            
+        </div>       
+        {{#if user}}     
         <div class="buttons">
             <button class="but">
                 <a href="/editAdopt/{{result.id}}">Editar</a>
@@ -16,6 +17,7 @@
                 <button type="submit" class="but">Eliminar</button>
             </form>
         </div>
+        {{/if}}
     </div>
 
 </section>
