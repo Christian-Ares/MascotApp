@@ -201,7 +201,7 @@ h1 {
 }
 
 .divider{
-  background-color: antiquewhite;
+  background-color: rgba(134, 134, 134, .3);
   height: 2px;
 }
 
