@@ -214,3 +214,9 @@ h1 {
 .adoptLogForm .input{
   align-items: center;
 }
+
+.addLogForm{
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+}
