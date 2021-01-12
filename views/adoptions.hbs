@@ -43,20 +43,21 @@
 <br>
 
 
-
-<div class="row">
-  {{#each adopts}}
-  <div>
-    <div class="card">
-      <a href="/adoptions/{{id}}">
-        <img src="{{image_path}}" alt="{{image_name}}">
-        <h4><b>Name:{{Name}}</b></h4>
-        <p>Breed:{{breed}}</p>
-        <p>Bith Date:{{birthDate}}</p>
-        <p>Gender:{{Gender}}</p>
-        
-      </a>
+<div class="adoptContainer">
+  <div class="row">
+    {{#each adopts}}
+    <div>
+      <div class="card">
+        <a href="/adoptions/{{id}}">
+          <img src="{{image_path}}" alt="{{image_name}}">
+          <h4><b>Name:{{Name}}</b></h4>
+          <p>Breed:{{breed}}</p>
+          <p>Bith Date:{{birthDate}}</p>
+          <p>Gender:{{Gender}}</p>
+          
+        </a>
+      </div>
     </div>
+    {{/each}}
   </div>
-  {{/each}}
 </div>
