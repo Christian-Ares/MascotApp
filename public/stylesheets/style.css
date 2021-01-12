@@ -198,6 +198,7 @@ h1 {
   background-color: rgb(134, 134, 134, .7);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
   border-radius: 10px;
+  width: fit-content;
 }
 
 .divider{
@@ -206,6 +207,8 @@ h1 {
 }
 
 .adoptLogForm{
+  display: flex;
+  flex-direction: column;
   text-align: center;
   align-items: center;
   justify-content: center;
@@ -218,6 +221,6 @@ h1 {
 .addLogForm{
   display: flex;
   flex-direction: column;
-  width: fit-content;
+  width: min-content;
 }
 
