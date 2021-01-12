@@ -211,7 +211,7 @@ h1 {
   justify-content: center;
 }
 
-.adoptLogForm .input{
+.adoptLogForm input{
   align-items: center;
 }
 
@@ -221,6 +221,3 @@ h1 {
   width: fit-content;
 }
 
-.adoptContainer{
-  width: 1024px;
-}
