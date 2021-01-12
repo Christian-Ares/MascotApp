@@ -1,43 +1,45 @@
-<div class="container">
-  <div class="addLogForm">
+<section id="addPetSection">
+  <div class="container">
+    <div class="addLogForm">
 
-  <h2>Add your pet here:</h2>
-    <div id="formDiv">
-      <form action="/newPet" method="POST" enctype="multipart/form-data">
+    <h2>Add your pet here:</h2>
+      <div id="formDiv">
+        <form action="/newPet" method="POST" enctype="multipart/form-data">
 
-      <label for="name">Name:</label>
-      <input type="text" name="name" required>
+        <label for="name">Name:</label>
+        <input type="text" name="name" required>
 
-      <div class="divider"></div>
+        <div class="divider"></div>
 
-      <label for="chipId">Chip ID:</label>
-      <input type="text" name="chipId" required>
+        <label for="chipId">Chip ID:</label>
+        <input type="text" name="chipId" required>
 
-      <div class="divider"></div>
+        <div class="divider"></div>
 
-      <label for="age">Age:</label>
-      <input type="text" name="age">
+        <label for="age">Age:</label>
+        <input type="text" name="age">
 
-      <div class="divider"></div>
+        <div class="divider"></div>
 
-      <label for="gender">Gender:</label>
-      <input type="text" name="gender" required>
+        <label for="gender">Gender:</label>
+        <input type="text" name="gender" required>
 
-      <div class="divider"></div>
+        <div class="divider"></div>
 
-      <label for="hairColor">Hair Color:</label>
-      <input type="text" name="hairColor" required>
+        <label for="hairColor">Hair Color:</label>
+        <input type="text" name="hairColor" required>
 
-      <div class="divider"></div>
+        <div class="divider"></div>
 
-      <label for="Image_path">Image: </label>
-      <input type="file" name="Image_path">
+        <label for="Image_path">Image: </label>
+        <input type="file" name="Image_path">
 
-      <div class="divider"></div>
+        <div class="divider"></div>
 
-      <button type="submit" class="but">Add Pet</button>
+        <button type="submit" class="but">Add Pet</button>
 
-      </form>
+        </form>
+      </div>
     </div>
   </div>
-</div>
+</section>
