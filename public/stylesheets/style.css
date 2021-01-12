@@ -216,6 +216,8 @@ h1 {
 
 .adoptLogForm input{
   align-items: center;
+  justify-content: center;
+  margin: auto;
 }
 
 .addLogForm{
